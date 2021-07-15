@@ -1,0 +1,269 @@
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    section {
+        width: 100%;
+        min-height: 100vh;
+        background: #dde1e7;
+        padding: 50px 0;
+        position: relative;
+    }
+
+    section .mobile_nav {
+        display: none;
+    }
+
+    section .row {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section .row .col1 {
+        flex-basis: 25%;
+    }
+
+    section .row .col1 .button {
+        margin-top: 40px;
+    }
+
+    section .row .col1 .button a {
+        background-color: #eb4a4a;
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    section .row .col1 .button a:hover {
+        background-color: #ca4e4e;
+    }
+
+    section .row .col1 h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    section .row .col1 .menu li a {
+        display: inline-block;
+        margin: 50px 0 0;
+        font-size: 18px;
+        color: #2c3e50;
+        cursor: pointer;
+        position: relative;
+    }
+
+    section .row .col1 .menu li a::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #eb4a4a;
+        transition: 0.3s;
+    }
+
+    section .row .col1 .menu li a:hover::after {
+        width: 100%;
+    }
+
+    section .row .col2 {
+        flex-basis: 75%;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    section .info {
+        position: absolute;
+        top: 18%;
+        right: 10%;
+        width: 240px;
+    }
+
+    section .info p {
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1px;
+        position: relative;
+    }
+
+    section .info p::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: #eb4a4a;
+    }
+
+    section .row .col2 .heading {
+        margin-bottom: 40px;
+    }
+
+    section .row .col2 .heading h1 {
+        font-size: 62px;
+        font-family: 'Abril Fatface', cursive;
+        font-weight: lighter;
+    }
+
+    section .row .col2 .menu_items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    section .row .col2 .menu_items .box {
+        width: 18%;
+        height: auto;
+        background: #ffffff;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+        transition: 0.3s;
+    }
+
+    section .row .col2 .menu_items .box:hover {
+        transform: translateY(-8px);
+    }
+
+    section .row .col2 .menu_items .box .item_name h4 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    section .row .col2 .menu_items .box .img_box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+        margin-bottom: 20px;
+    }
+
+    section .row .col2 .menu_items .box .img_box img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    @media (max-width:600px) {
+
+        section .mobile_nav {
+            display: block;
+        }
+
+        section .mobile_nav .nav_container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        section .mobile_nav .nav_container .hamburger {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        section .mobile_nav .nav_container .hamburger span {
+            width: 40px;
+            height: 3px;
+            background-color: #eb4a4a;
+            display: block;
+            margin: 8px auto;
+
+        }
+
+        section .mobile_nav .nav_container .hamburger span:nth-child(1) {
+            margin: 6px 0;
+            width: 28px;
+        }
+
+        section .mobile_nav .nav_container .hamburger span:nth-child(2) {
+            width: 38px;
+            margin: 6px 0;
+        }
+
+        section .mobile_nav .nav_container .hamburger span:nth-child(3) {
+            width: 34px;
+            margin: 6px 0;
+
+        }
+
+        section .mobile_nav .nav_container .title h1 {
+            font-size: 26px;
+            font-family: 'Abril Fatface', cursive;
+        }
+
+        section .mobile_nav .nav_container .img img {
+            width: 40px;
+        }
+
+        section .row .col1 {
+            display: none;
+        }
+
+        section .row .col2 {
+            flex-basis: 100%;
+        }
+
+        section .row .col2 .heading h1 {
+            font-size: 52px;
+        }
+
+        section .row .col2 .menu_items .box {
+            width: 40%;
+            flex-wrap: wrap;
+            margin: 15px;
+        }
+
+        section .row .col2 .menu_items .box .img_box {
+            width: 100px;
+            height: 100px;
+        }
+
+        section .row .col2 .menu_items .box .img_box img {
+            width: 100px;
+            height: 100px;
+        }
+
+        section .info {
+            position: relative;
+            margin-top: 20px;
+            right: 0;
+            bottom: 0%;
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width:500px) {
+        section .row .col2 .heading h1 {
+            font-size: 38px;
+        }
+
+        section .row .col2 .menu_items .box .item_name h4 {
+            font-size: 12px;
+        }
+    }
